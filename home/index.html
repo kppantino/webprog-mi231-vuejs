@@ -5,19 +5,86 @@
   <title>My first Vue page</title>
 
 </head>
+
+
 <body>
+    <div class="container">
+        <header> 
+            <h1>Personal Profile Web Page</h1>  
+        </header>
+        <main>
+          <section class="main-content">
+            <h1>Example with JavaScript inside {{ }}</h1>
 
-<h1>Example with JavaScript inside {{ }}</h1>
+            <p>HAPPY NEW YEAR!</p>
+            <div id="app">
+            {{ message }} <br>
+            {{'Random number: ' + Math.ceil(Math.random()*6) }}
+            </div>
 
-<p>HAPPY NEW YEAR!</p>
-<div id="app">
-  {{ message }} <br>
-  {{'Random number: ' + Math.ceil(Math.random()*6) }}
-</div>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-<script src="js/vue.js"></script>
-
-</body>
+            <script src="js/vue.js"></script>
+            <div>
+                <h4>About Me</h4>
+                <p>
+                    Facebook: <a href="https://www.facebook.com/kyla.pantino/">Kyla Pantino</a><br>
+                    Instagram: <a href="https://www.instagram.com/kylapantino/">@kylapantino</a><br>
+                    LinkedIn: <a href="https://www.linkedin.com/in/kyla-amor-pantino-630755248/">Kyla Amor Pantino</a><br>
+                    Email: kppantino@student.apc.edu.ph
+                </p>
+            </div>
+            <div>
+                <h4>Education</h4>
+                <p>
+                    <strong>Elementary School:</strong> St. Scholastica's Academy, San Fernando, Pampanga<br>
+                    <strong>Junior High School:</strong> Graduated With High Honors, ICT High School<br>
+                    <strong>Senior High School:</strong> Graduated With Highest Honors, ICT High School<br>
+                    <strong>College:</strong> BS in IT, Asia Pacific College, Makati, Metro Manila
+                </p>
+            </div>
+            <div>
+                <h4>IT Experience</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Excel</li>
+                    <li>PowerBI</li>
+                    <li>Android Studio</li>
+                    <li>Web Design</li>
+                    <li>Laravel</li>
+                    <li>Frappe</li>
+                    <li>Django</li>
+                </ul> 
+            </div>  
+          </section>
+        </main>
+    
+        <footer>
+            <section>
+                <h4>Hobbies & Interests</h4>
+                <ul>
+                    <li>Volleyball</li>
+                    <li>Genshin Impact</li>
+                    <li>Binge watching movies and series</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Goals In Life / Dreams</h4>
+                <p>Travel to different countries:</p>
+                <ul>
+                    <li>Switzerland</li>
+                    <li>Japan</li>
+                    <li>South Korea</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Picture Gallery</h4>
+            </section>
+        </footer>
+      </div>
+    </body>
 </html>
