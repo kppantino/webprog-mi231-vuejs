@@ -1,7 +1,7 @@
   const app = Vue.createApp({
    data() {
     return {
-     message: "Hello WEBPROG MI231!",
+     message: "Happy New Year WEBPROG MI231!",
      vueClass: "pinkBG"
     }
    }
