@@ -43,7 +43,39 @@
             <h1>Example with JavaScript inside {{ }}</h1>
 
             <p>HAPPY NEW YEAR!</p>
-            
+
+            <h1>Example: Shopping List With Important Items</h1>
+            <p>In this version of our shopping list the user can define if an item is important. The checkbox is more dynamic because the 'true' or 'false' text changes to show the status when the user checks it.</p>
+            <div id="app">
+            <form v-on:submit.prevent="addItem">
+                <p>
+                What do you need? <br>
+                <input type="text" required placeholder="item name.." v-model="itemName">
+                </p>
+                <p>
+                How many? <br>
+                <input type="number" placeholder="number of items.." v-model="itemNumber">
+                </p>
+                <p>
+                Important?
+                <label>
+                    <input type="checkbox" v-model="itemImportant">
+                    {{ itemImportant }}
+                </label>
+                </p>
+                <button type="submit">Add item</button>
+            </form>
+            <br>
+            <hr>
+
+            <div>
+                <p><strong>Shopping list:</strong></p>
+                <ul>
+                <li v-for="item in shoppingList" v-bind:class="{ impClass: item.important }">{{ item.name }}, {{ item.number}}</li>
+                </ul>
+            </div>
+            </div>
+
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script src="js/vue.js"></script>
             <script src="js/images.js"></script>
