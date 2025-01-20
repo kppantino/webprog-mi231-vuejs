@@ -1,5 +1,6 @@
+<template>
+  <h1>Hello World!</h1>
+</template>
+
 <script></script>
-
-<template></template>
-
 <style></style>
