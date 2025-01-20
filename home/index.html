@@ -10,76 +10,13 @@
 
 </head>
 
-    <div id="app">
-        {{ message }} <br>
-        {{'Random number: ' + Math.ceil(Math.random()*6) }}
-    
-        <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.</div>
-    </div>
 <body>
 
     <div class="container">
         <header> 
             <h1>Personal Profile Web Page</h1>  
-            <div id="app2">
-              <div>
-              <figure v-for="x in manyFoods">
-              <img v-bind:src="x.url">
-              <figcaption>{{ x.name }}</figcaption>
-              </figure>
-              </div>
-            </div>
-          
         </header>
         <main>
-          <div id="app2">
-          <div>
-          <figure v-for="x in manyFoods">
-          <img v-bind:src="x.url">
-          <figcaption>{{ x.name }}</figcaption>
-          </figure>
-          </div>
-          <section class="main-content">
-            <h1>Example with JavaScript inside {{ }}</h1>
-
-            <p>HAPPY NEW YEAR!</p>
-
-            <h1>Example: Shopping List With Important Items</h1>
-            <p>In this version of our shopping list the user can define if an item is important. The checkbox is more dynamic because the 'true' or 'false' text changes to show the status when the user checks it.</p>
-            <div id="app">
-            <form v-on:submit.prevent="addItem">
-                <p>
-                What do you need? <br>
-                <input type="text" required placeholder="item name.." v-model="itemName">
-                </p>
-                <p>
-                How many? <br>
-                <input type="number" placeholder="number of items.." v-model="itemNumber">
-                </p>
-                <p>
-                Important?
-                <label>
-                    <input type="checkbox" v-model="itemImportant">
-                    {{ itemImportant }}
-                </label>
-                </p>
-                <button type="submit">Add item</button>
-            </form>
-            <br>
-            <hr>
-
-            <div>
-                <p><strong>Shopping list:</strong></p>
-                <ul>
-                <li v-for="item in shoppingList" v-bind:class="{ impClass: item.important }">{{ item.name }}, {{ item.number}}</li>
-                </ul>
-            </div>
-            </div>
-
-            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-            <script src="js/vue.js"></script>
-            <script src="js/images.js"></script>
-            
             <div>
                 <h4>About Me</h4>
                 <p>
@@ -140,6 +77,71 @@
                 <h4>Picture Gallery</h4>
             </section>
         </footer>
+
+        <div id="app">
+            {{ message }} <br>
+            {{'Random number: ' + Math.ceil(Math.random()*6) }}
+          
+            <div v-bind:class="vueClass">This element is bound to the "pinkBG" class.</div>
+          </div>
+            
+          <div id="app2">
+            <div>
+              <figure v-for="x in manyFoods">
+                <img v-bind:src="x.url">
+                <figcaption>{{ x.name }}</figcaption>
+              </figure>
+            </div>
+          </div>
+            
+           <div id="app3">
+            <form v-on:submit.prevent="addItem">
+              <p>
+                What do you need? <br>
+                <input type="text" required placeholder="item name.." v-model="itemName">
+              </p>
+              <p>
+                How many? <br>
+                <input type="number" placeholder="number of items.." v-model="itemNumber">
+              </p>
+              <p>
+                Important?
+                <label>
+                  <input type="checkbox" v-model="itemImportant">
+                  {{ itemImportant }}
+                </label>
+              </p>
+              <button type="submit">Add item</button>
+            </form>
+            <br>
+            <hr>
+          
+            <div>
+              <p><strong>Shopping list:</strong></p>
+              <ul id="ulToFind">
+                <li 
+                  v-for="item in shoppingList" 
+                  v-bind:class="{ impClass: item.important }"
+                  v-on:click="item.found=!item.found"
+                  v-show="!item.found">
+                    {{ item.name }}, {{ item.number}}
+                </li>
+              </ul>
+              <ul id="ulFound">
+                <li 
+                  v-for="item in shoppingList" 
+                  v-bind:class="{ impClass: item.important }"
+                  v-on:click="item.found=!item.found"
+                  v-show="item.found">
+                    {{ item.name }}, {{ item.number}}
+                </li>
+              </ul>
+            </div>
+          </div> 
       </div>
     </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
+<script src="js/shopping.js"></script>
 </html>
