@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<template>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -146,7 +145,8 @@
     </div>
 </div>
 
+</template>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/suggest.js"></script>
-</html>
