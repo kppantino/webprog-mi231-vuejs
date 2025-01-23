@@ -1,6 +1,6 @@
 <template>
   <h1>Food</h1>
-  <food-itemv/>
+  <food-item/>
   <food-item2/>
   <food-item/>
   <food-item2/>
