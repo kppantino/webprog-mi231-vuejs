@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
 
@@ -12,7 +11,7 @@
 <header class="sticky-header">
     <div class="header-content">
       <img src="icons/kpIcon.png" alt="Kyla Pantino Icon" class="header-icon">
-      <h1> Kyla Amor's Portfolio</h1>
+      <h1>Kyla Amor's Portfolio</h1>
     </div>
     <nav class="nav-links">
       <a href="#home">Home</a>
@@ -20,10 +19,10 @@
       <a href="#gallery">Picture Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-  
-  <!-- Home Section -->
-  <section id="home" class="home">
+</header>
+
+<!-- Home Section -->
+<section id="home" class="home">
     <img src="pics/profile.svg" alt="Profile Picture" class="profile-pic-large">
     <div class="home-content">
       <div class="intro-text">
@@ -38,13 +37,11 @@
         </p>
       </div>
     </div>
-  </section>
+</section>
 
-  
- <!-- About Me Section -->
+<!-- About Me Section -->
 <section id="about" class="about-me">
     <h2>About Me</h2>
-  
     <div class="about-item">
       <img src="icons/educIcon.png" alt="Education Icon" class="about-icon">
       <div class="about-text">
@@ -56,7 +53,6 @@
         </p>
       </div>
     </div>
-  
     <div class="about-item reverse">
       <div class="about-text">
         <h3>Hobbies & Interests</h3>
@@ -68,7 +64,6 @@
       </div>
       <img src="icons/hobbiess.png" alt="Hobbies Icon" class="about-icon">
     </div>
-  
     <div class="about-item">
       <img src="icons/code.png" alt="IT Experience Icon" class="about-icon">
       <div class="about-text">
@@ -78,14 +73,16 @@
         </p>
       </div>
     </div>
-  </section>  
+</section>  
 
-  <!-- Picture Gallery Section -->
-  <section id="gallery" class="gallery">
+<!-- Picture Gallery Section -->
+<section id="gallery" class="gallery">
     <h2>Picture Gallery</h2>
-    <div id="app"></div>
-  </section>
-  
+    <div id="gallery-content">
+    <p>Soon!</p>
+    </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="contact-content">
@@ -96,49 +93,49 @@
       <p>Instagram: <a href="https://www.instagram.com/kylapantino/">@kylapantino</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/kyla-amor-pantino-630755248/">Kyla Amor Pantino</a></p>
     </div>
-  </section>
+</section>
 
-  <!-- References Section -->
+<!-- References Section -->
 <section id="references" class="references">
     <h2>References</h2>
     <div class="references-list">
       <ul>
         <li>
-        <a href="https://www.w3schools.com/vue/vue_forms.php">Vue Forms</a>
+          <a href="https://www.w3schools.com/vue/vue_forms.php">Vue Forms</a>
         </li>
         <li>
-            <a href="https://www.w3schools.com/vue/vue_v-for.php">Vue v-For</a>
+          <a href="https://www.w3schools.com/vue/vue_v-for.php">Vue v-For</a>
         </li>
         <li>
-            Special thanks to ChatGPT who identifies my errors :)))
+          Special thanks to ChatGPT who identifies my errors :)))
         </li>
       </ul>
     </div>
-  </section>
+</section>
 
-  <div id="suggestions" class="container guestbook-container">
+<!-- Suggestions Section -->
+<section id="suggestions" class="container guestbook-container">
     <div class="header">
       <div class="title-container">Suggestions</div>
     </div>
-    <form @submit.prevent="addSuggest">
+    <form>
       <div>
         <p>
           Name: <br>
-          <input type="text" v-model="guestName" placeholder="Enter your name" required />
+          <input type="text" placeholder="Enter your name" required />
         </p>
         <p>
           Suggestions? <br>
-          <textarea v-model="guestSuggest" placeholder="Write your suggestions here" rows="4" required></textarea>
+          <textarea placeholder="Write your suggestions here" rows="4" required></textarea>
         </p>
         <button type="submit">Submit</button>
       </div>
     </form>
     <div class="comment-section">
-      <div v-for="suggest in Suggestions" :key="suggest.id" class="suggest">
-        <p><strong>{{ suggest.name }}</strong></p>
-        <p>{{ suggest.message }}</p>
-      </div>
-    </div>
-</div>
 
+    </div>
+</section>
+
+</body>
 </template>
+
