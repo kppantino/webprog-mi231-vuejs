@@ -4,10 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/myStyle.css?version=0.1">
-  <link rel="stylesheet" href="css/gallery.css">
-  <link rel="stylesheet" href="css/suggestions.css">
-  <link rel="icon" type="image/png" href="./icons/kpIcon.png">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
@@ -146,7 +142,3 @@
 </div>
 
 </template>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/suggest.js"></script>
