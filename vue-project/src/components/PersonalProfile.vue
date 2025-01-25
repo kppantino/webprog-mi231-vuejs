@@ -1,7 +1,5 @@
 <template>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/myStyle.css?version=0.1">
@@ -50,7 +48,7 @@
     <h2>About Me</h2>
   
     <div class="about-item">
-      <img src="icons/educIcon.png" alt="Education Icon" class="about-icon">
+      <img src="icons/educIcon.png" alt="Education Icon" class="about-icon" />
       <div class="about-text">
         <h3>Education</h3>
         <p>
@@ -88,16 +86,16 @@
   <section id="gallery" class="gallery">
     <h2>Picture Gallery</h2>
     <div class="gallery-grid">
-      <img src="pics/kylapic1.jpg" alt="Kyla Picture 1">
-      <img src="pics/kylapic2.jpg" alt="Kyla Picture 2">
-      <img src="pics/kylapic3.jpg" alt="Kyla Picture 3">
-      <img src="pics/kylapic4.jpg" alt="Kyla Picture 4">
-      <img src="pics/kylapic5.jpg" alt="Kyla Picture 5">
-      <img src="pics/kylapic6.png" alt="Kyla Picture 6">
-      <img src="pics/kylapic7.jpg" alt="Kyla Picture 7">
-      <img src="pics/kylapic8.jpg" alt="Kyla Picture 8">
-      <img src="pics/kylapic9.JPG" alt="Kyla Picture 9">
-      <img src="pics/kylapic10.JPG" alt="Kyla Picture 10">
+      <img src="pics/kylapic1.jpg" alt="Kyla Picture 1" />
+      <img src="pics/kylapic2.jpg" alt="Kyla Picture 2" />
+      <img src="pics/kylapic3.jpg" alt="Kyla Picture 3" />
+      <img src="pics/kylapic4.jpg" alt="Kyla Picture 4" />
+      <img src="pics/kylapic5.jpg" alt="Kyla Picture 5" />
+      <img src="pics/kylapic6.png" alt="Kyla Picture 6" />
+      <img src="pics/kylapic7.jpg" alt="Kyla Picture 7" /> 
+      <img src="pics/kylapic8.jpg" alt="Kyla Picture 8" />
+      <img src="pics/kylapic9.JPG" alt="Kyla Picture 9" />
+      <img src="pics/kylapic10.JPG" alt="Kyla Picture 10" />
     </div>
   </section>
   
@@ -130,30 +128,6 @@
       </ul>
     </div>
   </section>
-
-  <div id="suggestions" class="container guestbook-container">
-    <div class="header">
-      <div class="title-container">Suggestions</div>
-    </div>
-    <form @submit.prevent="addSuggest">
-      <div>
-        <p>
-          Name: <br>
-          <input type="text" v-model="guestName" placeholder="Enter your name" required />
-        </p>
-        <p>
-          Suggestions? <br>
-          <textarea v-model="guestSuggest" placeholder="Write your suggestions here" rows="4" required></textarea>
-        </p>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-    <div class="comment-section">
-      <div v-for="suggest in Suggestions" :key="suggest.id" class="suggest">
-        <p><strong>{{ suggest.name }}</strong></p>
-        <p>{{ suggest.message }}</p>
-      </div>
-    </div>
 </div>
 
 </template>
