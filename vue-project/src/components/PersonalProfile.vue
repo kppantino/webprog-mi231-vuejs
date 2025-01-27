@@ -105,87 +105,240 @@ export default {
 </script>
 
 <style scoped>
-/***************************
-  General Styling
-***************************/
+
+
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+  color: #FFE0E9;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f9;
-  color: #333;
 }
 
-h1, h2, h3 {
-  color: #444;
-}
-
-/***************************
-  Header Styling
-***************************/
+/* Sticky Header */
 .sticky-header {
   position: sticky;
   top: 0;
-  background: #4a90e2;
-  color: #fff;
-  padding: 1rem;
   z-index: 1000;
+  background: linear-gradient(135deg, #52182b, #8A2846);
+  padding: 10px 50px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.45);
+
 }
 
 .header-content {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.header-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.sticky-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #FFC2D4;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; 
+  align-items: center; 
 }
 
 .nav-links a {
-  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #FFE0E9;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
+  padding: 5px 10px; 
 }
 
 .nav-links a:hover {
-  color: #ffe600;
+  text-decoration: underline;
 }
 
-/***************************
-  Section Styling
-***************************/
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-}
-
+/* Home Section */
 .home {
+  text-align: center;
+  padding: 40px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap:40px; 
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 15px;
+  margin: top 45px;
+  margin-bottom: 45px;
+}
+
+
+
+.home-content {
+  text-align: left; 
+}
+
+.home-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; 
+  margin-bottom: 100px;
+}
+
+.home-content p {
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  max-width: 600px; 
+  margin: 0;
+}
+
+
+/* About Me Section */
+.about-me {
+  padding: 50px 150px; 
+  background: black
+}
+
+.about-me h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #FFE0E9;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.about-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-icon {
+  width: 170px;
+  height: 170px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  color: #FFE0E9;
+  max-width: 600px;
+}
+
+.about-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+/* Contact Section */
+.contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 50px 20px;
+  background-color: #000;
+  color: #FFE0E9;
   text-align: center;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+.contact-content {
+  background: linear-gradient(to bottom, #000,#602437);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/***************************
-  Responsive Design
-***************************/
-@media (max-width: 768px) {
-  .sticky-header {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    margin-top: 10px;
-  }
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
 }
+
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #FFE0E9;
+  font-size: 1rem; 
+}
+
+.contact a {
+  color: #FFE0E9;
+  text-decoration: none;
+  font-size: 1rem; 
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #FF9EBB;
+  font-size: 1rem; 
+}
+
+/* References Section */
+.references {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #FFE0E9;
+  text-align: center;
+}
+
+.references h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #FF9EBB;
+}
+
+.references-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.references-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #FFE0E9;
+}
+
+.references-list a {
+  color: #FF9EBB;
+  text-decoration: none;
+}
+
+.references-list a:hover {
+  text-decoration: underline;
+  color: #FFE0E9;
+}
+
 </style>
