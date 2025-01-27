@@ -3,21 +3,21 @@
     <!-- Header -->
     <header class="sticky-header">
       <div class="header-content">
-        <img src="icons/kpIcon.png" alt="Kyla Pantino Icon" class="header-icon" />
+        <img src="@/assets/icons/kpIcon.png" alt="Kyla Pantino Icon" class="header-icon" />
         <h1>Kyla Amor's Portfolio</h1>
       </div>
       <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#gallery">Picture Gallery</a>
-        <a href="#contact">Contact</a>
+        <router-link to="#home">Home</router-link>
+        <router-link to="#about">About Me</router-link>
+        <router-link to="#gallery">Picture Gallery</router-link>
+        <router-link to="#contact">Contact</router-link>
       </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home" class="home">
       <div class="home-content">
-        <img src="pics/profile.svg" alt="Profile Picture" class="profile-pic-large" />
+        <img src="@/assets/pics/profile.svg" alt="Profile Picture" class="profile-pic-large" />
         <div class="intro-text">
           <h2>Hello, I'm Kyla Amor Pantino!</h2>
           <p>
@@ -36,7 +36,7 @@
     <section id="about" class="about-me">
       <h2>About Me</h2>
       <div class="about-item">
-        <img src="icons/educIcon.png" alt="Education Icon" class="about-icon" />
+        <img src="@/assets/icons/educIcon.png" alt="Education Icon" class="about-icon" />
         <div class="about-text">
           <h3>Education</h3>
           <p>
@@ -51,16 +51,16 @@
         <div class="about-text">
           <h3>Hobbies & Interests</h3>
           <p>
-            <img src="icons/vb.png" alt="Volleyball Icon" class="inline-icon" /> Volleyball<br />
-            <img src="icons/games.png" alt="Genshin Icon" class="inline-icon" /> Genshin Impact<br />
-            <img src="icons/movie.png" alt="Movies Icon" class="inline-icon" /> Binge Watching Movies & Series
+            <img src="@/assets/icons/vb.png" alt="Volleyball Icon" class="inline-icon" /> Volleyball<br />
+            <img src="@/assets/icons/games.png" alt="Genshin Icon" class="inline-icon" /> Genshin Impact<br />
+            <img src="@/assets/icons/movie.png" alt="Movies Icon" class="inline-icon" /> Binge Watching Movies & Series
           </p>
         </div>
-        <img src="icons/hobbiess.png" alt="Hobbies Icon" class="about-icon" />
+        <img src="@/assets/icons/hobbiess.png" alt="Hobbies Icon" class="about-icon" />
       </div>
 
       <div class="about-item">
-        <img src="icons/code.png" alt="IT Experience Icon" class="about-icon" />
+        <img src="@/assets/icons/code.png" alt="IT Experience Icon" class="about-icon" />
         <div class="about-text">
           <h3>IT Experience</h3>
           <p>
@@ -74,15 +74,22 @@
     <section id="gallery" class="gallery">
       <h2>Picture Gallery</h2>
       <div class="gallery-grid">
-        <img src="pics/kylapic1.jpg" alt="Kyla Picture 1" />
-        <!-- Add remaining images here -->
+        <img src="@/assets/pics/kylapic1.jpg" alt="Kyla Picture 1" />
+        <img src="@/assets/pics/kylapic2.jpg" alt="Kyla Picture 2" />
+        <img src="@/assets/pics/kylapic3.jpg" alt="Kyla Picture 3" />
+        <img src="@/assets/pics/kylapic4.jpg" alt="Kyla Picture 4" />
+        <img src="@/assets/pics/kylapic5.jpg" alt="Kyla Picture 5" />
+        <img src="@/assets/pics/kylapic6.jpg" alt="Kyla Picture 6" />
+        <img src="@/assets/pics/kylapic7.jpg" alt="Kyla Picture 7" />
+        <img src="@/assets/pics/kylapic8.jpg" alt="Kyla Picture 8" />
+        <img src="@/assets/pics/kylapic9.jpg" alt="Kyla Picture 9" />
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="contact-content">
-        <img src="icons/contactIcon.png" alt="Contact Icon" class="contact-icon" />
+        <img src="@/assets/icons/contactIcon.png" alt="Contact Icon" class="contact-icon" />
         <h2>Contact Me!</h2>
         <p>Email: <a href="mailto:kppantino@student.apc.edu.ph">kppantino@student.apc.edu.ph</a></p>
         <p>Facebook: <a href="https://www.facebook.com/kyla.pantino/">Kyla Pantino</a></p>
@@ -105,10 +112,10 @@
   </div>
 </template>
 
-<style>
-/***************************
-  General Styling
-***************************/
+<script>
+</script>
+
+<style scoped>
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -122,9 +129,6 @@ h1, h2, h3 {
   color: #444;
 }
 
-/***************************
-  Header Styling
-***************************/
 .sticky-header {
   position: sticky;
   top: 0;
@@ -160,9 +164,6 @@ h1, h2, h3 {
   color: #ffe600;
 }
 
-/***************************
-  Section Styling
-***************************/
 section {
   padding: 2rem;
   margin: 1rem auto;
@@ -182,9 +183,18 @@ section {
   margin-bottom: 1rem;
 }
 
-/***************************
-  Responsive Design
-***************************/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
   .sticky-header {
     flex-direction: column;
